@@ -1,0 +1,52 @@
+<!-- Get All Albums with same userID togther -->
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .image-grid-item {
+    overflow: hidden;
+  }
+  .image-grid-item a {
+    width: 100%;
+    height: auto;
+  }
+  p {
+    color: white;
+    font-family: Poppins;
+  }
+</style>
+<div
+  style="width: auto; height: 70px; background-color: black"
+  class="d-flex justify-content-around align-items-center"
+>
+  <p>{{ userData.name }} |</p>
+  <p>{{ userData.email }} |</p>
+  <p>{{ userData.phone }} |</p>
+  <p>
+    {{ userData.address.street }},{{ userData.address.suite }},{{
+      userData.address.city
+    }}
+  </p>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+  <div
+    class="d-flex justify-content-center align-items-center"
+    class="image-grid"
+  >
+    <div
+      class="image-grid-item"
+      *ngFor="let u of user"
+      style="width: 200px; height: 200px; background-color: #8900e2"
+      class="d-flex justify-content-center align-items-center mx-3 my-4"
+    >
+      <a
+        routerLink="/photos/{{ u.id }}"
+        style="text-decoration: none; color: White"
+      >
+        Album {{ u.id }}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+  }
+  .image-grid-item {
+    overflow: hidden;
+  }
+  .image-grid-item img {
+    width: 100%;
+    height: auto;
+  }
+  p {
+    color: white;
+    font-family: Poppins;
+  }
+</style>
+
+<!-- <div
+  style="width: auto; height: 70px; background-color: black"
+  class="d-flex justify-content-around align-items-center"
+>
+  <p>{{ userData.name }} |</p>
+  <p>{{ userData.email }} |</p>
+  <p>{{ userData.phone }} |</p>
+  <p>
+    {{ userData.address.street }},{{ userData.address.suite }},{{
+      userData.address.city
+    }}
+  </p>
+</div> -->
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="image-grid">
+    <div *ngFor="let u of user" class="mx-3 my-4" class="image-grid-item">
+      <img style="width: 100px; height: 100px" src="{{ u.url }}" />
+    </div>
+  </div>
+</div>

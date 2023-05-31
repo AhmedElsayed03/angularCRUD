@@ -1,0 +1,82 @@
+<style>
+  h1 {
+    font-family: Poppins;
+  }
+  button {
+    background-color: #ffffff;
+    color: #8900e2;
+    font-family: Poppins;
+  }
+  button:hover {
+    background-color: #8900e2;
+    color: white;
+  }
+
+  th {
+    color: white;
+    background: #8900e2;
+  }
+  td {
+    font-family: Poppins;
+  }
+</style>
+<div
+  style="width: auto; height: 100px"
+  class="d-flex align-items-center justify-content-around bg-black bg-gradient"
+>
+  <h1 class="text-white mx-4">U S E R S</h1>
+
+  <!-- <button type="button" class="btn rounded-0" (click)="addEditForm()">
+    Add User
+  </button> -->
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Number</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>
+          <a
+            routerLink="/albums/{{ u.id }}"
+            style="text-decoration: none; color: #8900e2"
+            >{{ u.name }}</a
+          >
+        </td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.phone }}</td>
+        <td>
+          {{ u.address.street }},{{ u.address.suite }},{{ u.address.city }}
+        </td>
+        <td><input type="button" value="Edit" class="btn rounded-0" /></td>
+        <td><input type="button" value="Delete" class="btn rounded-0" /></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>
+          <a
+            routerLink="/albums/{{ u.id }}"
+            style="text-decoration: none; color: #8900e2"
+            >{{ u.name }}</a
+          >
+        </td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.phone }}</td>
+        <td>
+          {{ u.address.street }},{{ u.address.suite }},{{ u.address.city }}
+        </td>
+        <td><input type="button" value="Edit" class="btn rounded-0" /></td>
+        <td><input type="button" value="Delete" class="btn rounded-0" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

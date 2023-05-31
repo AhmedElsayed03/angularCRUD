@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Poppins";
+    src: url(assets/Font/Poppins-ExtraLight.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: "PoppinsB";
+    src: url(assets/Font/Poppins-Bold.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: "PoppinsL";
+    src: url(assets/Font/Poppins-Light.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: "PoppinsEL";
+    src: url(assets/Font/Poppins-ExtraLight.ttf) format('ttf');
+  }
+a{
+    font-family: Poppins;
+}
+
+input{
+    font-family: Poppins;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
